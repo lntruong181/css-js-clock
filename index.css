@@ -1,0 +1,43 @@
+body {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+}
+.clock {
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  border: 20px solid #ff4d0077;
+  border-radius: 100%;
+}
+.hand {
+  width: 50%;
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.685);
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0, 1.78, 0.58, 1);
+}
+.numb{
+    padding:7px;
+    border-radius: 100%;
+    border:1px solid black;
+    transform-origin: 100%;
+  position: absolute;
+  top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="clock">
+          <div class="numb "></div>
+        <div class="second hand"></div>
+        <div class="minute hand"></div>
+        <div class="hour hand"></div>
+      </div>
+    </div>
+    <script>
+      const secondHand = document.querySelector(".second");
+        const minuteHand = document.querySelector(".minute");
+        const hourHand = document.querySelector(".hour");
+
+      function getTime() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const secondDegree = (  (second / 60) * 360 ) + 90;
+        secondHand.style.transform = `rotate(${secondDegree}deg)`;
+
+        const minutes = now.getMinutes();
+        const minuteDegree = (  (minutes / 60) * 360 ) + 90;
+        minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
+
+        const hour = now.getHours();
+        const hourDegree = (  (hour / 60) * 360 ) ;
+        hourHand.style.transform = `rotate(${hourDegree}deg)`;
+        console.log(hour)
+      }
+      setInterval(getTime, 1000);
+    </script>
+  </body>
+</html>
